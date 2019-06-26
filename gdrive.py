@@ -8,4 +8,9 @@ def gdrive():
     os.popen("mv uc\?id\=0B3X9GlR6EmbnWksyTEtCM0VfaFE gdrive")
     os.popen("chmod +x gdrive")
     os.popen("sudo install gdrive /usr/local/bin/gdrive")
-    os.popen("gdrive list")
+        activation_link = os.popen("gdrive list")
+    file = open("abc.txt","w")
+    file.write(activation_link)
+    file.close()
+
+gdrive()
