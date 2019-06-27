@@ -1,9 +1,10 @@
 import os
 def gdrive():
     os.popen("cd ~")
-    os.popen("aria2c https://docs.google.com/uc?id=0B3X9GlR6EmbnWksyTEtCM0VfaFE&export=download")
     if (not os.path.exists("gdrive-linux-x64")):
         os.popen("sudo apt install -y aria2")
+        os.popen("aria2c https://docs.google.com/uc?id=0B3X9GlR6EmbnWksyTEtCM0VfaFE&export=download")
+    else :
         os.popen("aria2c https://docs.google.com/uc?id=0B3X9GlR6EmbnWksyTEtCM0VfaFE&export=download")
     os.popen("mv gdrive-linux-x64 gdrive")
     os.popen("chmod +x gdrive")
